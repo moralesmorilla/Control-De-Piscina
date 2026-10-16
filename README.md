@@ -1,19 +1,51 @@
-# React + Vite
+# Control de acceso a la piscina
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pequeña muestra en desarrollo de una aplicación web para ayudar a gestionar el acceso a la piscina de una comunidad. La idea es poder consultar a qué vivienda pertenece una persona y, más adelante, facilitar al personal autorizado el control de quién puede entrar. Este prototipo sirve como demostración inicial de cómo podría ser el proyecto completo.
 
-Currently, two official plugins are available:
+## Estado del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El proyecto está **en desarrollo** y todavía es solo una muestra del proyecto completo. Por ahora permite buscar viviendas indicando bloque, escalera, piso y letra. Si encuentra resultados, muestra los nombres y las fotos de ejemplo asociados a esa vivienda.
 
-## React Compiler
+Los datos actuales son de prueba y se cargan desde `public/data.json`. La aplicación todavía no tiene backend, no registra entradas a la piscina ni valida permisos de acceso.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Funcionalidades pendientes
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+- Añadir propietarios.
+- Actualizar los datos de los propietarios.
+- Eliminar propietarios.
+- Implementar el inicio de sesión.
+- Crear un panel de administración para gestionar la información.
+- Desarrollar el backend y conectarlo con la aplicación.
+- Completar el control y registro de acceso a la piscina.
 
-## Expanding the ESLint configuration
+## Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- CSS
+
+## Requisitos
+
+- Node.js
+- npm
+
+## Instalación y uso
+
+Desde la carpeta del proyecto, ejecuta:
+
+```bash
+npm install
+npm run dev
+```
+
+Vite mostrará en la terminal la dirección local para abrir la aplicación en el navegador.
+
+## Comandos disponibles
+
+```bash
+npm run dev      # Inicia el servidor de desarrollo
+npm run build    # Genera la versión de producción
+npm run preview  # Previsualiza la versión de producción
+npm run lint     # Ejecuta ESLint
+```
