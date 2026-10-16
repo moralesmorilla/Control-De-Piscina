@@ -1,0 +1,129 @@
+.search-page {
+    min-height: 65vh;
+    display: grid;
+    place-items: center;
+    padding: 48px 24px;
+    background: linear-gradient(135deg, #f7f9ff 0%, #eef2ff 100%);
+}
+
+.search-card {
+    width: min(900px, 100%);
+    display: grid;
+    grid-template-columns: minmax(260px, 0.85fr) minmax(280px, 1.15fr);
+    overflow: hidden;
+    border: 1px solid #dfe5f2;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(42, 58, 105, 0.12);
+}
+
+.search-form,
+.content {
+    padding: 36px;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 14px;
+    background: #f9faff;
+}
+
+.search-form h1 {
+    grid-column: 1 / -1;
+    margin: 0 0 14px;
+    color: #1d2945;
+    font-size: clamp(1.7rem, 3vw, 2.25rem);
+}
+
+.search-form label {
+    align-self: end;
+    color: #53617b;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.search-form input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    height: 42px;
+    padding: 8px 12px;
+    border: 1px solid #cbd4e6;
+    border-radius: 8px;
+    color: #1d2945;
+    background: #ffffff;
+    font: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: #3e5af6;
+    box-shadow: 0 0 0 3px rgba(62, 90, 246, 0.14);
+}
+
+.button-search {
+    grid-column: 1 / -1;
+    margin-top: 14px;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    background: #3e5af6;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.button-search:hover {
+    background: #3048d4;
+    transform: translateY(-1px);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #e3e8f2;
+    color: #53617b;
+}
+
+.content h2 {
+    margin: 0;
+    color: #7a8498;
+    font-size: 1.2rem;
+}
+
+.content p {
+    margin: 0 0 18px;
+    font-size: 1.05rem;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.content strong {
+    color: #1d2945;
+}
+
+@media (max-width: 650px) {
+    .search-page {
+        padding: 28px 16px;
+    }
+
+    .search-card {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form,
+    .content {
+        padding: 26px 22px;
+    }
+
+    .content {
+        border-top: 1px solid #e3e8f2;
+        border-left: 0;
+    }
+}
